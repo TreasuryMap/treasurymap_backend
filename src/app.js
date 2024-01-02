@@ -11,7 +11,7 @@ const corsOptions = {
   origin: "https://treasurymap.vercel.app", // O reemplázalo con el dominio específico de tu frontend
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true, // Permite incluir cookies en las solicitudes (si es necesario)
-  optionsSuccessStatus: 204, // Algunos navegadores devuelven un código 204 en lugar de 200
+  optionsSuccessStatus: 204,
   allowedHeaders: "Content-Type, Authorization, Your-Other-Headers",
 };
 
