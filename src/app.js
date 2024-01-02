@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const db = require("./utils/database");
 const initModels = require("./models/init.models");
 const routerApi = require("./routes");
+const http = require("http");
 
 const corsOptions = {
   origin: "*",
@@ -13,6 +14,11 @@ const corsOptions = {
   optionsSuccessStatus: 204,
   allowedHeaders: "Content-Type, Authorization, Your-Other-Headers",
 };
+
+const httpServer = http.createServer(app);
+httpServer.listen(8000, () => {
+  console.log("Servidor HTTP en el puerto 8000");
+});
 
 app.use(express.json());
 app.use(cors(corsOptions));
